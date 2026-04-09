@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Arquivo de configuração principal do aplicativo Android -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Configurações globais da aplicação -->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppComprasAndroid">
+
+        <!-- Activity inicial do aplicativo (tela de login) -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true">
+            <!-- Define como ponto de entrada do aplicativo -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" /> <!-- Activity principal -->
+                <category android:name="android.intent.category.LAUNCHER" /> <!-- Lançador do app -->
+            </intent-filter>
+        </activity>
+
+        <!-- Activity de cadastro de usuário -->
+        <activity android:name=".activities.CadastroActivity" />
+
+        <!-- Activity principal que gerencia os fragments -->
+        <activity android:name=".activities.MainActivity" />
+
+        <!-- Activity para redefinição de senha -->
+        <activity android:name=".activities.ResetPasswordActivity" />
+
+    </application>
+
+</manifest>
