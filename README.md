@@ -42,11 +42,11 @@
 
 ### Requisitos Mínimos
 
-* 3 Telas (Produtos, Carrinho, Confirmação)
-* RecyclerView
-* Activities & Fragments
-* Comunicação entre Activities via objetos
-* Layout ergonômico e responsivo
+* Mínimo de 3 Telas (Implementados 9 Fragments + Activities)
+* Uso de RecyclerView (Produtos, Carrinho, Pedidos e Favoritos)
+* Activities & Fragments (Arquitetura moderna e modular)
+* Comunicação entre telas via Objetos (Serializable)
+* Layout ergonômico e responsivo (Material Design 3)
 
 ---
 
@@ -168,8 +168,11 @@ helpers/
 
 tests/
 ├── IntegrationTest.java
-├── [testes de unidade]
-└── [outros]
+├── FormatoHelperTest.java
+├── ProdutoServiceTest.java
+├── CarrinhoServiceTest.java
+├── UsuarioServiceTest.java
+└── PedidoServiceTest.java
 ```
 
 **Checklist de Conclusão:**
@@ -217,12 +220,14 @@ AppCompras-Android/
 │   │   │   ├── 📁 models/                          # Modelos de dados
 │   │   │   │   ├── Carrinho.kt
 │   │   │   │   ├──  Produto.kt                      # Classe Produto
-│   │   │   │   └── Pedido.kt                       # Classe Pedido
+│   │   │   │   ├──  Pedido.kt                       # Classe Pedido
+│   │   │   │   └── Usuario.java
 │   │   │   │
 │   │   │   ├── 📁 services/                        # Lógica de negócio
 │   │   │   │   ├── ProdutoService.kt               # Serviço de produtos
 │   │   │   │   ├── CarrinhoService.kt              # Serviço do carrinho
-│   │   │   │   └── PedidoService.kt                # Serviço de pedidos
+│   │   │   │   ├── PedidoService.kt                # Serviço de pedidos
+│   │   │   │   └── UsuarioService.java
 │   │   │   │
 │   │   │   ├── 📁 ui/fragments/                    # Fragments (telas)
 │   │   │   │   ├── ProdutosFragment.kt             #  Listagem de produtos
@@ -233,7 +238,7 @@ AppCompras-Android/
 │   │   │   │   ├── PedidoDetalhesFragment.kt       #  Detalhes do pedido
 │   │   │   │   ├── FavoritosFragment.kt            #  Produtos favoritos
 │   │   │   │   ├── PerfilFragment.kt               #  Perfil do usuário
-│   │   │   │   │   └── SettingsFragment.kt         #  Configurações
+│   │   │   │   └── SettingsFragment.kt             #  Configurações
 │   │   │   │
 │   │   │   ├── 📁 interfaces/                      # Interfaces de comunicação
 │   │   │   │   └── ProdutoCommunication.kt         # Interface callback
@@ -304,13 +309,21 @@ AppCompras-Android/
 │   │   └── com/example/appcomprasandroid/
 │   │       ├── models/
 │   │       ├── services/
-│   │       └── helpers/
+│   │       ├──helpers/
+│   │       ├── CarrinhoServiceTest.java
+│   │       ├── FormatoHelperTest.java
+│   │       ├── PedidoServiceTest.java
+│   │       ├── ProdutoServiceTest.java
+│   │       ├── ProdutoTest.java
+│   │       └── UsuarioServiceTest.java
 │   │
 │   └── 📁 src/androidTest/                         # Testes instrumentados
 │       └── com/example/appcomprasandroid/
 │           ├── activities/
+│           ├── ExampleInstrumentedTest.java
 │           ├── fragments/
-│           └── integration/
+│           ├── integration/
+│           └── IntegrationTest.java
 │
 └── 📁 documentation/                               # Documentação técnica
     ├── 📄 RECYCLER_VIEW.md                         #  RecyclerView
@@ -325,30 +338,32 @@ AppCompras-Android/
 ## ✨ Funcionalidades Principais
 
 ### 🔐 Autenticação
-- **LoginActivity**: Tela de login com validação de credenciais
-- **CadastroActivity**: Registro de novo usuário
+- **LoginActivity**: Login com validação no `UsuarioService`.
+- **CadastroActivity**: Registro de novos usuários com persistência em memória (Singleton).
 - **ResetPasswordActivity**: Recuperação de senha
 
 ### 🛍️ Catálogo de Produtos
 - Listagem de produtos com RecyclerView
-- Detalhes completos do produto
+- Detalhes do produto com especificações técnicas.
 - Sistema de favoritos
 - Busca de produtos (Barra de pesquisa)
-- Imagens de produtos com Glide
+- Imagens de produtos com (Glide) e interface Material 3.
 
 ### 🛒 Carrinho de Compras
 - Adicionar/remover itens
-- Ajustar quantidades (+/-)
-- Cálculo automático de totais
+- Controle de quantidade (+/-).
+- Cálculo de subtotal e total em tempo real.
 - Persistência de dados em sessão
 - Badge de contador de itens
+- Remoção de itens com feedback visual.
 
 ### 📦 Gerenciamento de Pedidos
 - Visualização de histórico de compras
-- Detalhes de cada pedido
-- Status de entrega
 - Timeline de transações
-- Animações de transição suave
+- Registro de compras finalizadas.
+- Detalhamento de cada pedido realizado.
+- Status do pedido (Pendente/Concluído).
+
 
 ### 👤 Perfil do Usuário
 - Informações pessoais
