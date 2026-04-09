@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Layout principal da tela -->
+<!-- Organiza os elementos em coluna vertical -->
+<!-- Define espaçamento interno do conteúdo -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Texto de título da tela -->
+    <!-- Indica seção de histórico de pedidos -->
+    <!-- Destaca visualmente o cabeçalho -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Histórico de Pedidos"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Lista de pedidos -->
+    <!-- Exibe histórico de compras do usuário -->
+    <!-- Permite rolagem vertical -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPedidos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Texto exibido quando não há pedidos -->
+    <!-- Informa ausência de histórico -->
+    <!-- Inicialmente oculto -->
+    <TextView
+        android:id="@+id/txtPedidosVazio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Você ainda não realizou nenhum pedido."
+        android:visibility="gone" />
+
+</LinearLayout>

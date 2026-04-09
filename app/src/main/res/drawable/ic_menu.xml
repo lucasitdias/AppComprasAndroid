@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Vetor drawable utilizado como ícone -->
+<!-- Define dimensões do ícone e área de desenho (viewport) -->
+<!-- Permite aplicar cor padrão através de tint -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorControlNormal">
+
+  <!-- Caminho (path) responsável por desenhar o ícone -->
+  <!-- Representa visualmente um menu (três linhas horizontais) -->
+  <!-- Define formas e posições dentro do viewport -->
+  <path
+      android:fillColor="@android:color/white"
+      android:pathData="M3,18h18v-2H3v2zm0,-5h18v-2H3v2zm0,-7v2h18V6H3z"/>
+
+</vector>

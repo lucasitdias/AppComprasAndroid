@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- CardView (container com bordas arredondadas e elevação) -->
+<!-- Utilizado para representar um produto -->
+<!-- Permite interação com clique (efeito ripple) -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Layout principal do item -->
+    <!-- Organiza conteúdo horizontalmente -->
+    <!-- Centraliza elementos verticalmente -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Imagem do produto -->
+        <!-- Exibe representação visual -->
+        <!-- Ajusta conteúdo dentro do espaço -->
+        <ImageView
+            android:id="@+id/imgProduto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/ic_menu_report_image" />
+
+        <!-- Container de informações do produto -->
+        <!-- Agrupa nome, preço e descrição -->
+        <!-- Ocupa espaço restante -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="4dp">
+
+            <!-- Nome do produto -->
+            <!-- Exibe título do item -->
+            <!-- Limita em duas linhas -->
+            <TextView
+                android:id="@+id/txtNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome do Produto"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <!-- Preço do produto -->
+            <!-- Exibe valor em destaque -->
+            <!-- Utiliza cor primária -->
+            <TextView
+                android:id="@+id/txtPreco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 0,00"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Descrição do produto -->
+            <!-- Exibe resumo curto -->
+            <!-- Limita em duas linhas -->
+            <TextView
+                android:id="@+id/txtDescricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descrição curta..."
+                android:textSize="13sp"
+                android:textColor="@color/textSecondary"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Container de ações do produto -->
+        <!-- Agrupa botões de interação -->
+        <!-- Posicionado à direita -->
+        <LinearLayout
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center_vertical">
+
+            <!-- Botão de favorito -->
+            <!-- Permite marcar produto -->
+            <!-- Ícone de estrela -->
+            <ImageButton
+                android:id="@+id/btnFavorito"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/btn_star_big_off"
+                android:padding="8dp"
+                android:scaleType="centerInside" />
+
+            <!-- Container de controle de quantidade -->
+            <!-- Agrupa adicionar/remover -->
+            <!-- Centraliza elementos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- Botão de remover quantidade -->
+                <!-- Diminui quantidade do produto -->
+                <!-- Inicialmente oculto -->
+                <ImageButton
+                    android:id="@+id/btnRemover"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_delete"
+                    app:tint="@color/error"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:visibility="gone" />
+
+                <!-- Texto de quantidade -->
+                <!-- Exibe número de itens -->
+                <!-- Inicialmente oculto -->
+                <TextView
+                    android:id="@+id/txtQuantidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textPrimary"
+                    android:visibility="gone" />
+
+                <!-- Botão de adicionar quantidade -->
+                <!-- Aumenta quantidade do produto -->
+                <!-- Sempre visível -->
+                <ImageButton
+                    android:id="@+id/btnAdicionar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_input_add"
+                    app:tint="@color/primary"
+                    android:padding="8dp"
+                    android:scaleType="centerInside" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

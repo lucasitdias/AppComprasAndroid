@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ScrollView (permite rolagem vertical do conteúdo) -->
+<!-- Utilizado para telas com bastante informação -->
+<!-- Garante acessibilidade em diferentes tamanhos de tela -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Layout principal da tela -->
+    <!-- Organiza os elementos em coluna vertical -->
+    <!-- Aplica espaçamento interno -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Container da imagem do produto -->
+        <!-- Define área de destaque visual -->
+        <!-- Mantém proporção fixa -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Imagem do produto -->
+            <!-- Exibe representação visual do item -->
+            <!-- Ajusta imagem dentro do espaço -->
+            <ImageView
+                android:id="@+id/imgDetalheProduto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@android:drawable/ic_menu_report_image" />
+        </RelativeLayout>
+
+        <!-- Nome do produto -->
+        <!-- Exibe título principal -->
+        <!-- Destacado visualmente -->
+        <TextView
+            android:id="@+id/txtNomeDetalhe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary"
+            android:layout_marginBottom="24dp"
+            android:text="Nome do Produto"/>
+
+        <!-- Container de preço e quantidade -->
+        <!-- Organiza valor e controle de itens -->
+        <!-- Distribui elementos horizontalmente -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <!-- Texto com preço do produto -->
+            <!-- Exibe valor atual -->
+            <!-- Destacado visualmente -->
+            <TextView
+                android:id="@+id/txtPrecoDetalhe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="R$ 0,00"
+                android:textColor="@color/primary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- Controle de quantidade -->
+            <!-- Permite aumentar ou diminuir itens -->
+            <!-- Agrupa botões e valor -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_quantity_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <!-- Botão para diminuir quantidade -->
+                <!-- Reduz número de itens -->
+                <!-- Interação do usuário -->
+                <ImageButton
+                    android:id="@+id/btnDiminuir"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_input_delete"
+                    app:tint="@color/primary" />
+
+                <!-- Texto da quantidade -->
+                <!-- Exibe valor atual -->
+                <!-- Centralizado no container -->
+                <TextView
+                    android:id="@+id/txtQuantidade"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Botão para aumentar quantidade -->
+                <!-- Incrementa número de itens -->
+                <!-- Interação do usuário -->
+                <ImageButton
+                    android:id="@+id/btnAumentar"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_input_add"
+                    app:tint="@color/primary" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Linha divisória -->
+        <!-- Separa seções do layout -->
+        <!-- Melhora organização visual -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="16dp"
+            android:background="#DDDDDD" />
+
+        <!-- Container de especificações -->
+        <!-- Agrupa título e ação de favorito -->
+        <!-- Organiza elementos horizontalmente -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <!-- Texto de título das especificações -->
+            <!-- Indica seção de detalhes -->
+            <!-- Destaca conteúdo informativo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/especificacoes"
+                android:textColor="@color/textPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Botão de favorito -->
+            <!-- Permite marcar produto como favorito -->
+            <!-- Posicionado à direita -->
+            <ImageButton
+                android:id="@+id/btnFavoritoDetalhe"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:src="@android:drawable/btn_star_big_off" />
+        </RelativeLayout>
+
+        <!-- Texto de descrição do produto -->
+        <!-- Exibe detalhes técnicos -->
+        <!-- Melhora entendimento do item -->
+        <TextView
+            android:id="@+id/txtDescricaoDetalhe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textSecondary"
+            android:lineSpacingExtra="4dp"
+            android:text="Descrição técnica detalhada aqui..."/>
+
+        <!-- Botão para adicionar ao carrinho -->
+        <!-- Executa ação de inclusão -->
+        <!-- Principal interação do usuário -->
+        <Button
+            android:id="@+id/btnAdicionarAoCarrinho"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/adicionar_ao_carrinho"
+            android:backgroundTint="@color/cta_button"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <!-- Botão para finalizar compra -->
+        <!-- Permite concluir pedido diretamente -->
+        <!-- Inicialmente desabilitado -->
+        <Button
+            android:id="@+id/btnFinalizarCompraDetalhe"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:text="FINALIZAR COMPRA"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:enabled="false"
+            android:alpha="0.5"
+            app:cornerRadius="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

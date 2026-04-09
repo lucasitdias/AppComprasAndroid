@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Layout principal da tela -->
+<!-- Organiza os elementos em coluna vertical -->
+<!-- Centraliza o conteúdo na tela -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!-- Texto de título da tela -->
+    <!-- Indica seção de configurações -->
+    <!-- Destacado como cabeçalho -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Configurações"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Texto descritivo da tela -->
+    <!-- Explica conteúdo disponível -->
+    <!-- Complementa o título -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Opções de configuração do app." />
+
+</LinearLayout>

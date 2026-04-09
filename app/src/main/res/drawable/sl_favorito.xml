@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Selector drawable (altera o drawable conforme o estado) -->
+<!-- Define diferentes imagens para estados do componente -->
+<!-- Permite trocar visual com base em interação (ex: selecionado) -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Item quando o estado está selecionado (checked) -->
+    <!-- Exibe estrela ativada -->
+    <!-- Representa estado ativo -->
+    <item android:drawable="@android:drawable/btn_star_big_on" android:state_checked="true" />
+
+    <!-- Item padrão (quando não está selecionado) -->
+    <!-- Exibe estrela desativada -->
+    <!-- Representa estado inativo -->
+    <item android:drawable="@android:drawable/btn_star_big_off" />
+
+</selector>

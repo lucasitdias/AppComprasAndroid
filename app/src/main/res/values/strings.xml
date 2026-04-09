@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- Nome da aplicação exibido no sistema -->
+    <string name="app_name">TechStore</string>
+
+    <!-- Texto utilizado para exibir o total do carrinho -->
+    <!-- Recebe um valor dinâmico (%s) -->
+    <string name="total_carrinho">Total: %s</string>
+
+    <!-- Título da tela de login -->
+    <string name="login_title">TechStore</string>
+
+    <!-- Subtítulo exibido na tela de login -->
+    <string name="login_subtitle">Sua loja de informática</string>
+
+    <!-- Texto de dica (hint) para o campo de e-mail -->
+    <string name="hint_email">E-mail</string>
+
+    <!-- Texto de dica (hint) para o campo de senha -->
+    <string name="hint_senha">Senha</string>
+
+    <!-- Texto de dica (hint) para o campo de nome -->
+    <string name="hint_nome">Nome Completo</string>
+
+    <!-- Texto do botão de login -->
+    <string name="btn_entrar">Entrar</string>
+
+    <!-- Texto do botão de cadastro -->
+    <string name="btn_cadastrar">Cadastrar</string>
+
+    <!-- Mensagem exibida para usuários sem conta -->
+    <string name="msg_nao_tem_conta">Não tem uma conta? Cadastre-se</string>
+
+    <!-- Mensagem exibida para usuários que já possuem conta -->
+    <string name="msg_ja_tem_conta">Já tem uma conta? Faça Login</string>
+
+    <!-- Texto do menu de navegação para produtos -->
+    <string name="nav_produtos">Produtos</string>
+
+    <!-- Texto do menu de navegação para carrinho -->
+    <string name="nav_carrinho">Carrinho</string>
+
+    <!-- Título da tela de detalhes do produto -->
+    <string name="detalhes_produto">Detalhes do Produto</string>
+
+    <!-- Texto do botão para adicionar produto ao carrinho -->
+    <string name="adicionar_ao_carrinho">Adicionar ao Carrinho</string>
+
+    <!-- Título da seção de especificações técnicas -->
+    <string name="especificacoes">Especificações Técnicas</string>
+
+</resources>

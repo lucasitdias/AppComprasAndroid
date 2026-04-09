@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Ícone adaptativo do aplicativo -->
+<!-- Define as camadas que compõem o ícone -->
+<!-- Garante compatibilidade com diferentes formatos e temas -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Camada de fundo -->
+    <!-- Define o background do ícone -->
+    <!-- Fica abaixo das demais camadas -->
+    <background android:drawable="@drawable/ic_launcher_background" />
+
+    <!-- Camada principal (foreground) -->
+    <!-- Define o conteúdo visual do ícone -->
+    <!-- Fica sobre o fundo -->
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+
+    <!-- Camada monocromática -->
+    <!-- Utilizada em temas dinâmicos do sistema -->
+    <!-- Mantém consistência visual em diferentes modos -->
+    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
+
+</adaptive-icon>

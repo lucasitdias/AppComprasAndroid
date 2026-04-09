@@ -1,0 +1,18 @@
+<!-- Layout principal da tela -->
+<!-- Define o fundo e evita sobreposição de fragments -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- RecyclerView (lista reutilizável de itens) -->
+    <!-- Exibe coleção de produtos dinamicamente -->
+    <!-- Permite rolagem eficiente com reaproveitamento de views -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+</FrameLayout>

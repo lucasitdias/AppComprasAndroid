@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Layout principal da tela -->
+<!-- Organiza os elementos com posicionamento relativo -->
+<!-- Define fundo e estrutura geral da interface -->
+<!-- Adicionado clickable e focusable para evitar sobreposição de cliques -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Lista de itens do carrinho -->
+    <!-- Exibe produtos adicionados pelo usuário -->
+    <!-- Permite rolagem vertical dos itens -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCarrinho"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/cardResumo"
+        android:paddingVertical="8dp"
+        android:clipToPadding="false"/>
+
+    <!-- Card de resumo do pedido -->
+    <!-- Exibe total e ação de finalização -->
+    <!-- Fixa na parte inferior da tela -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardResumo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardElevation="16dp"
+        app:cardCornerRadius="0dp">
+
+        <!-- Container interno do card -->
+        <!-- Organiza elementos em coluna -->
+        <!-- Aplica espaçamento interno -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Linha de exibição do total -->
+            <!-- Organiza título e valor -->
+            <!-- Distribui elementos horizontalmente -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <!-- Texto de descrição do total -->
+                <!-- Indica valor do pedido -->
+                <!-- Alinhado à esquerda -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total do Pedido"
+                    android:textSize="18sp"
+                    android:textColor="@color/textSecondary"/>
+
+                <!-- Texto do valor total -->
+                <!-- Exibe preço calculado -->
+                <!-- Destacado visualmente -->
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 0,00"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"/>
+            </LinearLayout>
+
+            <!-- Botão para finalizar compra -->
+            <!-- Executa ação principal da tela -->
+            <!-- Confirma o pedido do usuário -->
+            <Button
+                android:id="@+id/btnConfirmar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="FINALIZAR COMPRA"
+                android:textStyle="bold"
+                android:backgroundTint="@color/cta_button"
+                android:textColor="@color/black"
+                app:cornerRadius="8dp"
+                android:elevation="4dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

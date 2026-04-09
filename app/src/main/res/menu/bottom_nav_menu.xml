@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Menu de navegação -->
+<!-- Define os itens exibidos no menu inferior ou lateral -->
+<!-- Cada item representa uma seção do aplicativo -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Item de navegação para produtos -->
+    <!-- Direciona para listagem de produtos -->
+    <!-- Ícone representativo da seção -->
+    <item
+        android:id="@+id/nav_produtos"
+        android:icon="@drawable/ic_produtos"
+        android:title="Produtos" />
+
+    <!-- Item de navegação para carrinho -->
+    <!-- Direciona para itens adicionados -->
+    <!-- Ícone de carrinho -->
+    <item
+        android:id="@+id/nav_carrinho"
+        android:icon="@drawable/ic_carrinho"
+        android:title="Carrinho" />
+
+    <!-- Item de navegação para favoritos -->
+    <!-- Direciona para produtos marcados -->
+    <!-- Utiliza ícone de estrela -->
+    <item
+        android:id="@+id/nav_favoritos"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="Favoritos" />
+
+    <!-- Item de navegação para pedidos -->
+    <!-- Direciona para histórico de pedidos -->
+    <!-- Ícone de histórico -->
+    <item
+        android:id="@+id/nav_pedidos"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:title="Pedidos" />
+
+</menu>
