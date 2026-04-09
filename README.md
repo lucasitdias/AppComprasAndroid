@@ -61,7 +61,6 @@ A **TechStore** é uma aplicação mobile de e-commerce em produtos de informát
 - ✅ Fluxo de compra intuitivo: Produtos → Carrinho → Confirmação  
 
 ---
-
 ## 👥 Divisão de Responsabilidades
 
 O projeto foi desenvolvido em equipe com responsabilidades bem distribuidas:
@@ -69,7 +68,7 @@ O projeto foi desenvolvido em equipe com responsabilidades bem distribuidas:
 ### 🧑‍💻 **Pessoa 1: Backend & Modelos (Matheus)**
 
 **Responsabilidades:**
-- Criar classes de modelo de dados (Produto, Pedido, Carrinho)
+- Criar classes de modelo de dados (Produto, Pedido, Carrinho, Usuario)
 - Implementar adapters para RecyclerView
 - Gerenciar lógica de negócio via Services
 - Criar interfaces de comunicação
@@ -77,22 +76,24 @@ O projeto foi desenvolvido em equipe com responsabilidades bem distribuidas:
 **Arquivos Principais:**
 ```
 models/
-├── Produto.kt
-├── Pedido.kt
-└── Carrinho.kt
+├── Produto.java
+├── Pedido.java
+├── Carrinho.java
+└── Usuario.java
 
 adapters/
-├── ProdutoAdapter.kt
-├── CarrinhoAdapter.kt
-└── PedidoAdapter.kt
+├── ProdutoAdapter.java
+├── CarrinhoAdapter.java
+└── PedidoAdapter.java
 
 services/
-├── ProdutoService.kt
-├── CarrinhoService.kt
-└── PedidoService.kt
+├── ProdutoService.java
+├── CarrinhoService.java
+├── PedidoService.java
+└── UsuarioService.java
 
 interfaces/
-└── ProdutoCommunication.kt
+└── ProdutoCommunication.java
 ```
 
 **Checklist de Conclusão:**
@@ -109,25 +110,28 @@ interfaces/
 - Criar fragments e layouts responsivos
 - Implementar RecyclerViews nas telas
 - Garantir UI intuitiva e ergonômica
-- Seguir Material Design
+- Seguir Material Design 3
 
 **Arquivos Principais:**
 ```
 ui/fragments/
-├── ProdutosFragment.kt
-├── ProdutoDetalhesFragment.kt
-├── CarrinhoFragment.kt
-├── ConfirmacaoFragment.kt
-├── PedidosFragment.kt
-├── PedidoDetalhesFragment.kt
-├── FavoritosFragment.kt
-├── PerfilFragment.kt
-└── SettingsFragment.kt
+├── ProdutosFragment.java
+├── ProdutoDetalhesFragment.java
+├── CarrinhoFragment.java
+├── ConfirmacaoFragment.java
+├── PedidosFragment.java
+├── PedidoDetalhesFragment.java
+├── FavoritosFragment.java
+├── PerfilFragment.java
+└── SettingsFragment.java
 
 res/layout/
 ├── fragment_produtos.xml
 ├── fragment_carrinho.xml
 ├── fragment_confirmacao.xml
+├── fragment_perfil.xml
+├── fragment_pedidos.xml
+├── fragment_favoritos.xml
 ├── item_produto.xml
 ├── item_carrinho.xml
 └── [outros]
@@ -145,25 +149,25 @@ res/layout/
 
 **Responsabilidades:**
 - Criar MainActivity como controlador central
-- Integrar todas as camadas do projeto
-- Gerenciar fluxo de navegação
-- Realizar testes de integração
-- Garantir estabilidade geral
+- Integrar todas as camadas do projeto (Autenticação e Navegação)
+- Gerenciar fluxo de navegação entre Activities e Fragments
+- Realizar testes de integração instrumentados
+- Garantir estabilidade geral e correção do Manifest
 
 **Arquivos Principais:**
 ```
 activities/
-├── LoginActivity.kt
-├── CadastroActivity.kt
-├── ResetPasswordActivity.kt
-└── MainActivity.kt
+├── LoginActivity.java
+├── CadastroActivity.java
+├── ResetPasswordActivity.java
+└── MainActivity.java
 
 helpers/
-├── FormatoHelper.kt
-└── NavigationHelper.kt (opcional)
+├── FormatoHelper.java
+└── NavigationHelper.java
 
 tests/
-├── IntegrationTest.kt
+├── IntegrationTest.java
 ├── [testes de unidade]
 └── [outros]
 ```
@@ -172,7 +176,7 @@ tests/
 - [x] MainActivity controlando fragments corretamente
 - [x] Navegação funcionando sem crashes
 - [x] Objetos passados corretamente entre telas
-- [x] Fluxo completo validado
+- [x] Fluxo completo validado (Login -> Compra -> Sucesso)
 - [x] Testes de integração criados
 
 ---
