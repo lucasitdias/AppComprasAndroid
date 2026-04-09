@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Conjunto de animações (permite combinar várias animações em uma só) -->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Animação de translação (movimento horizontal) -->
+    <!-- Posição inicial: fora da tela à esquerda (-100%) -->
+    <!-- Posição final: posição original (0%) -->
+    <!-- Duração da animação em milissegundos -->
+    <translate
+        android:fromXDelta="-100%"
+        android:toXDelta="0%"
+        android:duration="300" />
+
+    <!-- Animação de transparência (fade) -->
+    <!-- Começa totalmente invisível -->
+    <!-- Termina totalmente visível -->
+    <!-- Duração da animação -->
+    <alpha
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:duration="300" />
+
+</set>

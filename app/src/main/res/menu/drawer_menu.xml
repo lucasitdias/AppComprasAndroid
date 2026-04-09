@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Menu do Navigation Drawer -->
+<!-- Define opções exibidas no menu lateral -->
+<!-- Organiza itens principais e secundários -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Grupo de itens principais -->
+    <!-- Permite apenas uma opção selecionada -->
+    <!-- Controla comportamento de seleção -->
+    <group android:checkableBehavior="single">
+
+        <!-- Item de navegação para produtos -->
+        <!-- Direciona para listagem de produtos -->
+        <!-- Ícone representativo -->
+        <item
+            android:id="@+id/nav_drawer_produtos"
+            android:icon="@drawable/ic_produtos"
+            android:title="Produtos" />
+
+        <!-- Item de navegação para carrinho -->
+        <!-- Direciona para itens do usuário -->
+        <!-- Ícone de carrinho -->
+        <item
+            android:id="@+id/nav_drawer_carrinho"
+            android:icon="@drawable/ic_carrinho"
+            android:title="Meu Carrinho" />
+
+        <!-- Item de navegação para perfil -->
+        <!-- Direciona para dados do usuário -->
+        <!-- Ícone de edição -->
+        <item
+            android:id="@+id/nav_drawer_perfil"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Meu Perfil" />
+
+        <!-- Item de navegação para favoritos -->
+        <!-- Direciona para itens marcados -->
+        <!-- Ícone representativo -->
+        <item
+            android:id="@+id/nav_drawer_favoritos"
+            android:icon="@android:drawable/btn_star_big_on"
+            android:title="Meus Favoritos" />
+
+        <!-- Item de navegação para pedidos -->
+        <!-- Direciona para histórico -->
+        <!-- Ícone de histórico -->
+        <item
+            android:id="@+id/nav_drawer_pedidos"
+            android:icon="@android:drawable/ic_menu_recent_history"
+            android:title="Meus Pedidos" />
+    </group>
+
+    <!-- Submenu de configurações -->
+    <!-- Agrupa opções secundárias -->
+    <!-- Exibido como categoria -->
+    <item android:title="Configurações">
+        <menu>
+
+            <!-- Item de configurações -->
+            <!-- Direciona para tela de ajustes -->
+            <!-- Ícone de preferências -->
+            <item
+                android:id="@+id/nav_drawer_settings"
+                android:icon="@android:drawable/ic_menu_preferences"
+                android:title="Configurações" />
+
+            <!-- Item de logout -->
+            <!-- Permite sair da aplicação -->
+            <!-- Ícone de desligar -->
+            <item
+                android:id="@+id/nav_drawer_logout"
+                android:icon="@android:drawable/ic_lock_power_off"
+                android:title="Sair" />
+        </menu>
+    </item>
+
+</menu>

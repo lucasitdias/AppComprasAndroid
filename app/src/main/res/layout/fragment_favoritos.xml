@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Layout principal da tela -->
+<!-- Organiza os elementos em coluna vertical -->
+<!-- Define espaçamento interno do conteúdo -->
+<!-- Adicionado background, clickable e focusable para evitar sobreposição -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Texto de título da tela -->
+    <!-- Indica seção de favoritos -->
+    <!-- Destaca visualmente o cabeçalho -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meus Favoritos"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Lista de itens favoritos -->
+    <!-- Exibe produtos marcados pelo usuário -->
+    <!-- Permite rolagem vertical -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFavoritos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Texto exibido quando não há favoritos -->
+    <!-- Informa ausência de itens -->
+    <!-- Inicialmente oculto -->
+    <TextView
+        android:id="@+id/txtFavoritosVazio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Você ainda não tem favoritos."
+        android:visibility="gone" />
+
+</LinearLayout>

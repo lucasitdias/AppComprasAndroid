@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema base da aplicação -->
+    <!-- Define configurações gerais do tema -->
+    <!-- Herda do Material3 sem ActionBar -->
+    <style name="Base.Theme.AppComprasAndroid" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Personalização do tema escuro -->
+        <!-- Permite definir cores principais -->
+        <!-- Exemplo comentado para referência -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+</resources>

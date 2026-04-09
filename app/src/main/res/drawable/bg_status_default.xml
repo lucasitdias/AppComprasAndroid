@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Forma desenhável (shape) utilizada como fundo de componente -->
+<!-- Define aparência visual com cor e bordas arredondadas -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Cor de fundo do componente -->
+    <!-- Define a cor principal exibida -->
+    <solid android:color="#757575" />
+
+    <!-- Configuração dos cantos arredondados -->
+    <!-- Define o nível de arredondamento das bordas -->
+    <corners android:radius="16dp" />
+
+</shape>

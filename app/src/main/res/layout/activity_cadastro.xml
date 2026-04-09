@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ScrollView (permite rolagem vertical do conteúdo) -->
+<!-- Ocupa toda a tela disponível -->
+<!-- Garante que o conteúdo seja exibido corretamente em telas menores -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background">
+
+    <!-- Layout principal (organiza os elementos em coluna) -->
+    <!-- Centraliza os itens na tela -->
+    <!-- Aplica espaçamento interno ao conteúdo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <!-- Imagem do logo do aplicativo -->
+        <!-- Define tamanho fixo para exibição -->
+        <!-- Utilizada como identidade visual -->
+        <ImageView
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo_techstore" />
+
+        <!-- Texto de título da tela -->
+        <!-- Informa a ação principal (cadastro) -->
+        <!-- Define estilo visual do texto -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crie sua conta"
+            android:textSize="18sp"
+            android:textColor="@color/textSecondary"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Campo de entrada para nome -->
+        <!-- Define container com estilo Material -->
+        <!-- Exibe hint para orientação do usuário -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_nome"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="16dp">
+
+            <!-- Campo de texto para digitação do nome -->
+            <!-- Define tipo de entrada como nome de pessoa -->
+            <!-- Associado ao layout acima -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editCadastroNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo de entrada para email -->
+        <!-- Define container com estilo Material -->
+        <!-- Exibe hint para orientação do usuário -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="16dp">
+
+            <!-- Campo de texto para digitação do email -->
+            <!-- Define tipo de entrada como email -->
+            <!-- Associado ao layout acima -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editCadastroEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo de entrada para senha -->
+        <!-- Define container com estilo Material -->
+        <!-- Permite alternar visibilidade da senha -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_senha"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="24dp"
+            app:passwordToggleEnabled="true">
+
+            <!-- Campo de texto para digitação da senha -->
+            <!-- Define tipo de entrada como senha -->
+            <!-- Associado ao layout acima -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editCadastroSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botão para realizar cadastro -->
+        <!-- Ocupa largura total -->
+        <!-- Executa ação principal da tela -->
+        <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/btn_cadastrar"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Texto para navegação para tela de login -->
+        <!-- Indica ação alternativa -->
+        <!-- Estilizado como link clicável -->
+        <TextView
+            android:id="@+id/txtIrParaLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/msg_ja_tem_conta"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

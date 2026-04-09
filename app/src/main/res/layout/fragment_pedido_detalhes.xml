@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NestedScrollView (permite rolagem com suporte a componentes internos) -->
+<!-- Ideal para telas com múltiplos elementos roláveis -->
+<!-- Garante comportamento correto com RecyclerView interno -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Layout principal da tela -->
+    <!-- Organiza os elementos em coluna vertical -->
+    <!-- Aplica espaçamento interno -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Card com informações do pedido -->
+        <!-- Agrupa dados principais da compra -->
+        <!-- Apresenta conteúdo com destaque visual -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <!-- Container interno do card -->
+            <!-- Organiza informações em coluna -->
+            <!-- Aplica espaçamento interno -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Texto com ID do pedido -->
+                <!-- Identifica a compra realizada -->
+                <!-- Destacado como título -->
+                <TextView
+                    android:id="@+id/txtDetPedidoId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pedido #000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"/>
+
+                <!-- Texto com status do pedido -->
+                <!-- Indica situação atual da compra -->
+                <!-- Utiliza fundo customizado -->
+                <TextView
+                    android:id="@+id/txtDetPedidoStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_status_default"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:text="STATUS"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <!-- Linha divisória -->
+                <!-- Separa visualmente as seções -->
+                <!-- Melhora organização do layout -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="#DDDDDD" />
+
+                <!-- Título da seção de informações -->
+                <!-- Introduz dados adicionais da compra -->
+                <!-- Define hierarquia visual -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Informações da Compra"
+                    android:textStyle="bold" />
+
+                <!-- Texto com data do pedido -->
+                <!-- Exibe momento da compra -->
+                <!-- Informação complementar -->
+                <TextView
+                    android:id="@+id/txtDetPedidoData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Data: 00/00/0000 00:00" />
+
+                <!-- Texto com valor total -->
+                <!-- Exibe custo final do pedido -->
+                <!-- Destacado visualmente -->
+                <TextView
+                    android:id="@+id/txtDetPedidoTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Total: R$ 0,00"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Título da lista de itens -->
+        <!-- Indica seção de produtos do pedido -->
+        <!-- Define hierarquia visual -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="Itens do Pedido"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Lista de itens do pedido -->
+        <!-- Exibe produtos comprados -->
+        <!-- Rolagem controlada pelo NestedScrollView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerItensPedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+        <!-- Botão para finalizar compra -->
+        <!-- Executa ação de confirmação -->
+        <!-- Inicialmente oculto -->
+        <Button
+            android:id="@+id/btnFinalizarDetPedido"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:text="FINALIZAR COMPRA"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:cornerRadius="8dp"/>
+
+        <!-- Botão para cancelar pedido -->
+        <!-- Permite cancelar a compra -->
+        <!-- Inicialmente oculto -->
+        <Button
+            android:id="@+id/btnCancelarDetPedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="Cancelar Pedido"
+            android:backgroundTint="#B00020"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            style="@style/Widget.Material3.Button.TonalButton"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- CardView (container com bordas arredondadas e elevação) -->
+<!-- Utilizado para representar item do carrinho -->
+<!-- Destaca visualmente cada produto -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <!-- Layout interno do card -->
+    <!-- Organiza os elementos horizontalmente -->
+    <!-- Centraliza conteúdo verticalmente -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Imagem do produto -->
+        <!-- Exibe representação visual -->
+        <!-- Ajusta conteúdo dentro do espaço -->
+        <ImageView
+            android:id="@+id/imgCarrinho"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/ic_menu_report_image" />
+
+        <!-- Container de informações do produto -->
+        <!-- Agrupa nome e preço -->
+        <!-- Expande para ocupar espaço disponível -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <!-- Nome do produto -->
+            <!-- Exibe título do item -->
+            <!-- Destacado visualmente -->
+            <TextView
+                android:id="@+id/txtNomeCarrinho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome do Produto"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary"/>
+
+            <!-- Preço do produto -->
+            <!-- Exibe valor do item -->
+            <!-- Destacado com cor primária -->
+            <TextView
+                android:id="@+id/txtPrecoCarrinho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 0,00"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Botão para remover item -->
+        <!-- Permite excluir produto do carrinho -->
+        <!-- Posicionado à direita -->
+        <ImageButton
+            android:id="@+id/btnRemover"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="@color/error"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

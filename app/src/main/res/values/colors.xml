@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Recursos de cores da aplicação -->
+<!-- Define paleta de cores utilizada no app -->
+<!-- Facilita padronização visual e manutenção -->
+<resources>
+
+    <!-- Cor preta padrão -->
+    <!-- Utilizada para textos ou elementos escuros -->
+    <!-- Representa cor sólida -->
+    <color name="black">#FF000000</color>
+
+    <!-- Cor branca padrão -->
+    <!-- Utilizada para fundos ou textos claros -->
+    <!-- Representa cor sólida -->
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Cor primária -->
+    <!-- Utilizada como cor principal do app -->
+    <!-- Aplicada em botões e destaques -->
+    <color name="primary">#0D47A1</color>
+
+    <!-- Variação escura da cor primária -->
+    <!-- Utilizada em estados ou elementos secundários -->
+    <!-- Complementa a paleta principal -->
+    <color name="primaryDark">#002171</color>
+
+    <!-- Variação clara da cor primária -->
+    <!-- Utilizada em backgrounds ou efeitos -->
+    <!-- Complementa a paleta principal -->
+    <color name="primaryLight">#5472d3</color>
+
+    <!-- Cor de destaque (accent) -->
+    <!-- Utilizada para chamar atenção -->
+    <!-- Aplicada em ações importantes -->
+    <color name="accent">#FFAB00</color>
+
+    <!-- Cor de fundo geral -->
+    <!-- Utilizada no background das telas -->
+    <!-- Define aparência base do app -->
+    <color name="background">#F5F5F5</color>
+
+    <!-- Cor de superfície -->
+    <!-- Utilizada em cards e containers -->
+    <!-- Mantém contraste com fundo -->
+    <color name="surface">#FFFFFF</color>
+
+    <!-- Cor de erro -->
+    <!-- Utilizada para alertas e falhas -->
+    <!-- Indica ações negativas -->
+    <color name="error">#B00020</color>
+
+    <!-- Cor de texto principal -->
+    <!-- Utilizada para conteúdo importante -->
+    <!-- Garante boa legibilidade -->
+    <color name="textPrimary">#212121</color>
+
+    <!-- Cor de texto secundário -->
+    <!-- Utilizada para informações auxiliares -->
+    <!-- Menor destaque visual -->
+    <color name="textSecondary">#757575</color>
+
+    <!-- Cor de sucesso -->
+    <!-- Utilizada para mensagens positivas -->
+    <!-- Indica ações concluídas -->
+    <color name="success">#2E7D32</color>
+
+    <!-- Cor de botão de ação (CTA) -->
+    <!-- Utilizada para ações principais -->
+    <!-- Destaca botões importantes -->
+    <color name="cta_button">#FFD600</color>
+
+</resources>
