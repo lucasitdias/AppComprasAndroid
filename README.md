@@ -37,7 +37,7 @@
 * **Disciplina:** Desenvolvimento Android
 * **Entrega:** 09/04/2026
 * **Formato:** ZIP via AVA
-* **Equipe:** 3 pessoas (Mateus, Lucas, Henrique)
+* **Equipe:** 3 pessoas (Matheus, Lucas, Henrique)
 * **Ambiente:** Android studio com linguagem java
 
 ### Requisitos Mínimos
