@@ -32,7 +32,7 @@
 
 ---
 
-## 📌 Informações do Projeto (P1)
+##  Informações do Projeto (P1)
 
 * **Disciplina:** Desenvolvimento Android
 * **Entrega:** 09/04/2026
@@ -52,20 +52,20 @@
 
 A **TechStore** é uma aplicação mobile de e-commerce em produtos de informática. Desenvolvido como trabalho acadêmico (P1) em Android, a aplicação permite aos usuários:
 
-- ✅ Navegar por um catálogo de produtos com descrição e imagens  
-- ✅ Adicionar/remover produtos do carrinho de compras  
-- ✅ Gerenciar o perfil e visualizar histórico de pedidos  
-- ✅ Acompanhar o status de compras realizadas  
-- ✅ Implementação de componentes Android → (RecyclerView, Fragments, Activities)  
-- ✅ Interface responsiva e ergonômica com Material Design  
-- ✅ Fluxo de compra intuitivo: Produtos → Carrinho → Confirmação  
+-  Navegar por um catálogo de produtos com descrição e imagens  
+-  Adicionar/remover produtos do carrinho de compras  
+-  Gerenciar o perfil e visualizar histórico de pedidos  
+-  Acompanhar o status de compras realizadas  
+-  Implementação de componentes Android → (RecyclerView, Fragments, Activities)  
+-  Interface responsiva e ergonômica com Material Design  
+-  Fluxo de compra intuitivo: Produtos → Carrinho → Confirmação  
 
 ---
-## 👥 Divisão de Responsabilidades
+##  Divisão de Responsabilidades
 
 O projeto foi desenvolvido em equipe com responsabilidades bem distribuidas:
 
-### 🧑‍💻 **Pessoa 1: Backend & Modelos (Matheus)**
+###  **Pessoa 1: Backend & Modelos (Matheus)**
 
 **Responsabilidades:**
 - Criar classes de modelo de dados (Produto, Pedido, Carrinho, Usuario)
@@ -104,7 +104,7 @@ interfaces/
 
 ---
 
-### 🎨 **Pessoa 2: UI & Fragments (Lucas)**
+###  **Pessoa 2: UI & Fragments (Lucas)**
 
 **Responsabilidades:**
 - Criar fragments e layouts responsivos
@@ -145,7 +145,7 @@ res/layout/
 
 ---
 
-### 🔗 **Pessoa 3: Integração & Testes (Henrique)**
+###  **Pessoa 3: Integração & Testes (Henrique)**
 
 **Responsabilidades:**
 - Criar MainActivity como controlador central
@@ -184,7 +184,7 @@ tests/
 
 ---
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 AppCompras-Android/
@@ -335,21 +335,21 @@ AppCompras-Android/
 ```
 ---
 
-## ✨ Funcionalidades Principais
+##  Funcionalidades Principais
 
-### 🔐 Autenticação
+###  Autenticação
 - **LoginActivity**: Login com validação no `UsuarioService`.
 - **CadastroActivity**: Registro de novos usuários com persistência em memória (Singleton).
 - **ResetPasswordActivity**: Recuperação de senha
 
-### 🛍️ Catálogo de Produtos
+###  Catálogo de Produtos
 - Listagem de produtos com RecyclerView
 - Detalhes do produto com especificações técnicas.
 - Sistema de favoritos
 - Busca de produtos (Barra de pesquisa)
 - Imagens de produtos com (Glide) e interface Material 3.
 
-### 🛒 Carrinho de Compras
+###  Carrinho de Compras
 - Adicionar/remover itens
 - Controle de quantidade (+/-).
 - Cálculo de subtotal e total em tempo real.
@@ -357,7 +357,7 @@ AppCompras-Android/
 - Badge de contador de itens
 - Remoção de itens com feedback visual.
 
-### 📦 Gerenciamento de Pedidos
+###  Gerenciamento de Pedidos
 - Visualização de histórico de compras
 - Timeline de transações
 - Registro de compras finalizadas.
@@ -365,7 +365,7 @@ AppCompras-Android/
 - Status do pedido (Pendente/Concluído).
 
 
-### 👤 Perfil do Usuário
+###  Perfil do Usuário
 - Informações pessoais
 - Configurações de conta
 - Histórico de atividades
@@ -373,7 +373,7 @@ AppCompras-Android/
 
 ---
 
-## 🔄 Fluxo de Navegação
+##  Fluxo de Navegação
 
 ### Fluxo Visual Completo
 
@@ -473,7 +473,7 @@ AppCompras-Android/
 
 ---
 
-## 🛠️ Tecnologias e Dependências
+##  Tecnologias e Dependências
 
 ### Ambiente de Desenvolvimento
 | Tecnologia | Versão | Descrição |
@@ -712,7 +712,7 @@ adb logcat -c
 ```
 ---
 
-## 🧩 Componentes Principais
+##  Componentes Principais
 
 ### 1️⃣ **Activities (Telas Principais)**
 
@@ -789,7 +789,7 @@ Os **Fragments** são componentes reutilizáveis que funcionam dentro das Activi
 
 ---
 
-### 📋 Fragments com RecyclerView (Listas)
+###  Fragments com RecyclerView (Listas)
 
 | Fragment | Funcionalidades | Activity |
 |----------|----------------|----------|
@@ -1078,7 +1078,7 @@ val carrinhoTotal = MutableStateFlow(0.0)
 
 ---
 
-## 📦 Build e Deployment
+##  Build e Deployment
 
 ### Build Debug
 
@@ -1120,7 +1120,7 @@ app/build/outputs/apk/release/app-release.apk
 
 ---
 
-## 👥 Contribução no versionamento
+##  Contribução no versionamento
 
 ### Como Contribuir
 
@@ -1201,16 +1201,16 @@ Descrição:
 
 ## 👨‍💻 Contribuidores
 
-* 🧑‍💻 **Matheus**
-  🔗 https://github.com/Mbolsanello
+*  **Matheus**
+   https://github.com/Mbolsanello
   *Backend & Modelos*
 
-* 🎨 **Lucas**
-  🔗 https://github.com/lucasitdias
+*  **Lucas**
+   https://github.com/lucasitdias
   *UI & Fragments*
 
-* 🔗 **Henrique**
-  🔗 https://github.com/IronVisuals
+*  **Henrique**
+   https://github.com/IronVisuals
   *Integração & Testes*
 
 ---
@@ -1222,7 +1222,7 @@ Descrição:
 
 ---
 
-## 📄 Licença
+##  Licença
 
 Este projeto está licenciado sob a **Apache License 2.0**. 
 
