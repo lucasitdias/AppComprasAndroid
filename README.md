@@ -327,22 +327,22 @@ AppCompras-Android/
 │
 └── 📁 Documentação/                               # Documentação técnica do projeto
     ├── 📁 CHECK_LIST_POR_PESSOA/                  # Checklists individuais
-    │   ├── 📄 MATHEUS.md                  # Checklist do Matheus
-        ├── 📄 LUCAS.md                    # Checklist do Matheus
-    │   └── 📄 HENRIQUE.md                 # Checklist do Henrique
+    │   ├── 📄 MATHEUS.md                          # Checklist do Matheus
+        ├── 📄 LUCAS.md                            # Checklist do Matheus
+    │   └── 📄 HENRIQUE.md                         # Checklist do Henrique
     │
-    ├── 📁 ESCOPO/                                # Definição do projeto
-    │   ├── 📄 ESCOPO_DO_PROJETO.md               # Escopo geral
-    │   └── 📄 O_QUE_FAZ_APLICACAO.md             # Objetivo da aplicação
+    ├── 📁 ESCOPO/                                 # Definição do projeto
+    │   ├── 📄 ESCOPO_DO_PROJETO.md                # Escopo geral
+    │   └── 📄 O_QUE_FAZ_APLICACAO.md              # Objetivo da aplicação
     │
-    ├── 📁 ESTRUTURA_DO_PROJETO/                  # Arquitetura e organização
-    │   ├── 📄 ARQUITETURA_E_FLUXO.md             # Arquitetura + fluxo
-    │   ├── 📄 GUIA_INTEGRACAO_TESTES.md          # Integração e testes
-    │   ├── 📄 ACTIVITIES_FRAGMENTS.md            # Activities e Fragments
-    │   ├── 📄 COMUNICACAO.md                     # Comunicação entre componentes
-    │   ├── 📄 LAYOUT.md                          # Layout e design
-    │   ├── 📄 RECYCLER_VIEW.md                   # RecyclerView
-    │   └── 📄 TELAS_FLUXO.md                     # Fluxo de telas
+    ├── 📁 ESTRUTURA_DO_PROJETO/                   # Arquitetura e organização
+    │   ├── 📄 ARQUITETURA_E_FLUXO.md              # Arquitetura + fluxo
+    │   ├── 📄 GUIA_INTEGRACAO_TESTES.md           # Integração e testes
+    │   ├── 📄 ACTIVITIES_FRAGMENTS.md             # Activities e Fragments
+    │   ├── 📄 COMUNICACAO.md                      # Comunicação entre componentes
+    │   ├── 📄 LAYOUT.md                           # Layout e design
+    │   ├── 📄 RECYCLER_VIEW.md                    # RecyclerView
+    │   └── 📄 TELAS_FLUXO.md                      # Fluxo de telas
     │
     └── 📁 ORIENTACOES_POR_PESSOA/                       # Responsabilidades da equipe
         ├── 📄 MATHEUS.md                                # Orientações do Matheus
